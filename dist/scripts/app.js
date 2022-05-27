@@ -7,9 +7,9 @@ const port = process.env.PORT || 4000;
 server.use(cors());
 server.use(router);
 server.listen(port);*/
-import { index } from '../scripts/pages/index.js';
-import { misPokemon } from '../scripts/pages/mis-pokemon.js';
-import { detalles } from '..//scripts/pages/detalles.js';
+import { index } from '../pages/index.js';
+import { misPokemon } from '../pages/mis-pokemon.js';
+import { detalles } from '../pages/detalles.js';
 (() => {
     const path = location.pathname.split('/');
     if (path[path.length - 1] === '' ||
