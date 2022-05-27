@@ -10,7 +10,7 @@
         "build": "node ./dist/index.js",
         "sass": "sass -w src/scss:dist/css --no-source-map"
     },
-    "author": "Rodrigo Calvo",
+    "author": "Cristian Tonato",
     "license": "ISC",
     "devDependencies": {
         "@babel/plugin-transform-modules-commonjs": "^7.18.0",
