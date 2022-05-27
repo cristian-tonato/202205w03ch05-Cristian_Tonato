@@ -10,18 +10,16 @@ server.listen(port);*/
 import { index } from '../scripts/pages/index.js';
 import { misPokemon } from '../scripts/pages/mis-pokemon.js';
 import { detalles } from '..//scripts/pages/detalles.js';
-
 (() => {
     const path = location.pathname.split('/');
-
-    if (
-        path[path.length - 1] === '' ||
-        path[path.length - 1] === 'index.html'
-    ) {
+    if (path[path.length - 1] === '' ||
+        path[path.length - 1] === 'index.html') {
         document.addEventListener('DOMContentLoaded', index);
-    } else if (path[path.length - 1] === 'mis-pokemon.html') {
+    }
+    else if (path[path.length - 1] === 'mis-pokemon.html') {
         document.addEventListener('DOMContentLoaded', misPokemon);
-    } else {
+    }
+    else {
         document.addEventListener('DOMContentLoaded', detalles);
     }
 })();
