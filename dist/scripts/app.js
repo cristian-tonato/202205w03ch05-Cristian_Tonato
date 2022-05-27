@@ -1,4 +1,3 @@
-"use strict";
 /*const cors = require("cors");
 const jsonServer = require("json-server");
 const server = jsonServer.create();
@@ -7,4 +6,20 @@ const port = process.env.PORT || 4000;
 
 server.use(cors());
 server.use(router);
-server.listen(port);*/ 
+server.listen(port);*/
+import { index } from '../pages/index.js';
+import { misPokemon } from '../pages/mis-pokemon.js';
+import { detalles } from '../pages/detalles.js';
+(() => {
+    const path = location.pathname.split('/');
+    if (path[path.length - 1] === '' ||
+        path[path.length - 1] === 'index.html') {
+        document.addEventListener('DOMContentLoaded', index);
+    }
+    else if (path[path.length - 1] === 'mis-pokemon.html') {
+        document.addEventListener('DOMContentLoaded', misPokemon);
+    }
+    else {
+        document.addEventListener('DOMContentLoaded', detalles);
+    }
+})();
